@@ -1,0 +1,132 @@
+/* --- General Styling --- */
+.root-pane {
+    -fx-background-color: #f5f7fa; /* Light grey-blue background */
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.header-box {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 0 0 1 0;
+}
+
+.header-label {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50; /* Dark blue-grey text */
+}
+
+.section-header {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #34495e; /* Slightly lighter blue-grey */
+    -fx-padding: 5 0 5 0;
+}
+
+/* --- Button Styling --- */
+.button {
+    -fx-background-color: #3498db; /* Bright blue */
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0, 0, 2);
+}
+
+.button:hover {
+    -fx-background-color: #2980b9; /* Darker blue on hover */
+}
+
+.header-button {
+    -fx-background-color: #1abc9c; /* Turquoise */
+}
+
+.header-button:hover {
+    -fx-background-color: #16a085;
+}
+
+.header-button-logout {
+    -fx-background-color: #e74c3c; /* Red */
+}
+
+.header-button-logout:hover {
+    -fx-background-color: #c0392b;
+}
+
+.action-button-add {
+    -fx-background-color: #2ecc71; /* Green */
+}
+.action-button-add:hover {
+    -fx-background-color: #27ae60;
+}
+
+.action-button-edit {
+    -fx-background-color: #f39c12; /* Orange */
+}
+.action-button-edit:hover {
+    -fx-background-color: #f1c40f;
+}
+
+.action-button-delete {
+    -fx-background-color: #e74c3c; /* Red */
+}
+.action-button-delete:hover {
+    -fx-background-color: #c0392b;
+}
+
+
+/* --- TableView Styling --- */
+.table-view {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #dce1e6;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #34495e; /* Dark blue header */
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER_LEFT;
+}
+
+.table-view .table-cell {
+    -fx-border-color: transparent;
+    -fx-padding: 8px;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #fdfefe;
+}
+
+.table-row-cell:even {
+    -fx-background-color: #f5f7fa;
+}
+
+.table-row-cell:hover {
+    -fx-background-color: #eaf2f8;
+}
+
+.table-view:focused .table-row-cell:filled:focused:selected {
+    -fx-background-color: #aed6f1;
+}
+
+/* --- Action Buttons Inside Table --- */
+.table-action-button {
+    -fx-font-size: 11px;
+    -fx-padding: 4 8 4 8;
+}
+
+/* Status Colors in Table */
+.status-accepted { -fx-text-fill: #27ae60; }
+.status-completed { -fx-text-fill: #8e44ad; }
+.status-rejected { -fx-text-fill: #c0392b; }
+.status-pending { -fx-text-fill: #f39c12; }
+.status-paid { -fx-text-fill: #2980b9; }

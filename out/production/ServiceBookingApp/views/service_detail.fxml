@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane styleClass="root-pane" stylesheets="@service-detail.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.myapp.controllers.ServiceDetailController">
+    <top>
+        <HBox styleClass="header-pane" BorderPane.alignment="CENTER">
+            <children>
+                <Label fx:id="titleLabel" styleClass="title-label" text="Service Title" />
+            </children>
+        </HBox>
+    </top>
+    <center>
+        <GridPane styleClass="details-grid" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="250.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="350.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="220.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <ImageView fx:id="thumbnailView" fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" styleClass="thumbnail-view" />
+                <VBox spacing="15.0" GridPane.columnIndex="1">
+                    <children>
+                        <VBox>
+                            <children>
+                                <Label styleClass="detail-label-header" text="Provided by" />
+                                <Label fx:id="providerLabel" styleClass="detail-label-content" text="Provider Name" />
+                            </children>
+                        </VBox>
+                        <VBox>
+                            <children>
+                                <Label styleClass="detail-label-header" text="Price" />
+                                <Label fx:id="priceLabel" styleClass="detail-label-content" text="৳ 0.00" />
+                            </children>
+                        </VBox>
+                        <VBox>
+                            <children>
+                                <Label styleClass="detail-label-header" text="Provider Rating" />
+                                <Label fx:id="ratingLabel" styleClass="detail-label-content" text="0.0 ★" />
+                            </children>
+                        </VBox>
+                    </children>
+                </VBox>
+                <TextArea fx:id="descArea" editable="false" styleClass="description-area" text="Service description goes here..." GridPane.columnSpan="2" GridPane.rowIndex="1" />
+            </children>
+        </GridPane>
+    </center>
+    <bottom>
+        <HBox styleClass="action-bar" BorderPane.alignment="CENTER">
+            <children>
+                <Button onAction="#goBack" styleClass="back-button" text="Back to Dashboard" />
+                <Button fx:id="bookButton" onAction="#handleBook" styleClass="book-button" text="Book Now" />
+            </children>
+        </HBox>
+    </bottom>
+</BorderPane>

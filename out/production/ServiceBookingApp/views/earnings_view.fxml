@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="950.0" style="-fx-background-color: #f5f7fa;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.myapp.controllers.EarningsController">
+    <top>
+        <HBox alignment="CENTER" prefHeight="60.0" style="-fx-background-color: white; -fx-border-color: #e0e0e0; -fx-border-width: 0 0 1 0; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 10, 0, 0, 2);">
+            <children>
+                <Label text="My Earnings">
+                    <font>
+                        <Font name="System Bold" size="22.0" />
+                    </font>
+                    <textFill>
+                        #2c3e50
+                    </textFill>
+                </Label>
+            </children>
+        </HBox>
+    </top>
+    <center>
+        <TableView fx:id="earningsTableView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <columns>
+                <TableColumn fx:id="serviceColumn" prefWidth="340.0" text="Service" />
+                <TableColumn fx:id="totalColumn" prefWidth="150.0" text="Total Paid" />
+                <TableColumn fx:id="feeColumn" prefWidth="150.0" text="Platform Fee (10%)" />
+                <TableColumn fx:id="payoutColumn" prefWidth="150.0" text="Your Payout" />
+                <TableColumn fx:id="statusColumn" prefWidth="150.0" text="Status" />
+            </columns>
+            <BorderPane.margin>
+                <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+            </BorderPane.margin>
+        </TableView>
+    </center>
+    <bottom>
+        <VBox alignment="CENTER" prefHeight="120.0" spacing="20.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label fx:id="totalPayoutLabel" text="Total Earnings: ৳0.00" textFill="#27ae60">
+                    <font>
+                        <Font name="System Bold" size="20.0" />
+                    </font>
+                </Label>
+                <Button onAction="#goBack" prefHeight="40.0" prefWidth="180.0" text="Back to Dashboard" style="-fx-background-color: #34495e; -fx-text-fill: white; -fx-font-weight: bold;"/>
+            </children>
+        </VBox>
+    </bottom>
+</BorderPane>

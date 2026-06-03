@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.Rating?>
+
+<VBox alignment="TOP_CENTER" prefHeight="400.0" prefWidth="450.0" spacing="15.0" style="-fx-background-color: #f5f5f5;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.myapp.controllers.RatingController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <Label text="Rate Your Experience">
+        <font>
+            <Font name="System Bold" size="22.0" />
+        </font>
+    </Label>
+    <Label fx:id="serviceTitleLabel" text="Service: [Service Title]" wrapText="true" />
+    <Label text="Your Rating:" />
+    <Rating fx:id="starRating" rating="0" />
+    <Label text="Comments (Optional):" />
+    <TextArea fx:id="commentArea" prefHeight="100.0" promptText="Tell us about your experience..." wrapText="true" />
+    <HBox alignment="CENTER" spacing="10.0">
+        <Button onAction="#handleSubmitReview" style="-fx-background-color: #007bff; -fx-text-fill: white;" text="Submit Review" />
+        <Button onAction="#handleSkip" text="Skip for Now" />
+    </HBox>
+</VBox>

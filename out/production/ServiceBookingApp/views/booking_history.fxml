@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="700.0" prefWidth="950.0" styleClass="root-pane" stylesheets="@booking-history.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.myapp.controllers.BookingHistoryController">
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="20.0" styleClass="header-box" BorderPane.alignment="CENTER">
+            <children>
+                <Label styleClass="header-label" text="My Booking History" HBox.hgrow="ALWAYS" />
+                <Button onAction="#goBack" text="Back to Dashboard" />
+            </children>
+        </HBox>
+    </top>
+    <center>
+        <VBox spacing="10.0" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+            </padding>
+            <children>
+                <TableView fx:id="historyTableView" VBox.vgrow="ALWAYS">
+                    <columns>
+                        <TableColumn fx:id="serviceColumn" prefWidth="250.0" text="Service" />
+                        <TableColumn fx:id="providerColumn" prefWidth="150.0" text="Provider" />
+                        <TableColumn fx:id="statusColumn" prefWidth="120.0" text="Booking Status" />
+                        <TableColumn fx:id="paymentColumn" prefWidth="120.0" text="Payment Status" />
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                    </columnResizePolicy>
+                </TableView>
+                <HBox alignment="CENTER_RIGHT" spacing="15.0">
+                    <children>
+                        <Label text="For selected booking:" />
+                        <!-- Pay Now Button with Green Background -->
+                        <Button fx:id="payNowButton" onAction="#handlePayNow" styleClass="pay-now-button" text="Pay Now" />
+                        <!-- Leave a Review Button with Yellow Background -->
+                        <Button fx:id="reviewButton" onAction="#handleLeaveReview" styleClass="leave-review-button" text="Leave a Review" />
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </center>
+</BorderPane>
